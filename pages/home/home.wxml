@@ -1,2 +1,20 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 1.展示轮播图 -->
+<w-swiper list="{{banners}}"/>
+
+<!-- 2.推荐数据展示 -->
+<w-recommend recommends="{{recommends}}"/>
+
+<!-- 3.展示本周流行 -->
+<w-popular/>
+
+<!-- 4.tab-control -->
+<w-tab-control titles="{{titles}}"
+               bind:tabclick="handleTabClick"/>
+
+<!-- 5.展示商品数据 -->
+<view class="goods">
+  <block wx:for="goods[currentType.list]" wx:key="index">
+    <w-goods-item class="item" item="{{item}}"/>
+  </block>
+</view>
