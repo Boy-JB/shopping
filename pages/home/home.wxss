@@ -1,12 +1,8 @@
 /* pages/home/home.wxss */
-.goods {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.goods > .item {
-  width: 48%;
-  position: relative;
-  margin-top: 16rpx;
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }

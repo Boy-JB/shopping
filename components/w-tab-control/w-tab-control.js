@@ -21,17 +21,16 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    handleItemClick(event) {
-      //1.取出index
-      const index = event.currentTarget.dataset.index;
-
-      //2.修改currentIndex
+    itemClick(event) {
+      // console.log(event)
+      //1.设置新的index
       this.setData({
-        currentIndex: index
+        currentIndex: event.currentTarget.dataset.index
       })
 
-      //3.通知页面内部的点击事件
-      this.triggerEvent('tabclick', {index, title: this.properties.titles[index]}, {})
+      // 2.发出时间
+      const data = {index: this.data.currentIndex}
+      this.triggerEvent("tabclick", data, {})
     }
   }
 })

@@ -7,7 +7,7 @@ export function getMultiData() {
 }
 
 export function getGoodsData(type, page) {
-  return rquest({
+  return request({
     url: '/home/data',
     data: {
       type,
